@@ -60,9 +60,9 @@ class MainActivity : ComponentActivity() {
 }
 
 class MixingViewModel : ViewModel() {
-    val colorOne = mutableStateOf(Color.Black)
-    val colorTwo = mutableStateOf(Color.DarkGray)
-    val colorThree = mutableStateOf(Color.Gray)
+    val colorOne = mutableStateOf(Color.Red)
+    val colorTwo = mutableStateOf(Color.Green)
+    val colorThree = mutableStateOf(Color.Blue)
 }
 
 @OptIn(ExperimentalStdlibApi::class)
@@ -206,7 +206,7 @@ fun Mixing() {
 
         Text(
             text = "+",
-            fontSize = 40.sp,
+            fontSize = 30.sp,
         )
 
         Column(
@@ -259,7 +259,7 @@ fun Mixing() {
 
         Text(
             text = "+",
-            fontSize = 40.sp
+            fontSize = 30.sp
         )
 
         Column(
@@ -312,21 +312,17 @@ fun Mixing() {
 
         Text(
             text = "=",
-            fontSize = 40.sp
+            fontSize = 30.sp
         )
 
         Column(
             modifier = Modifier.weight(1f),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            if (colors.contains(mixedColor)) {
-                Text(text = "${colorNames[colors.indexOf(mixedColor)]}")
-            } else {
-                Text(
-                    text = "Not name! Hex: #${mixedColor.value.toHexString
-                        (format = HexFormat.Default).dropLast(8)}"
-                )
-            }
+            Text(
+                text = "Hex: #${mixedColor.value.toHexString
+                    (format = HexFormat.Default).dropLast(8)}"
+            )
             Box(
                 modifier = Modifier
                     .weight(1f)
