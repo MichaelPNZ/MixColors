@@ -9,7 +9,9 @@ import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.core.infiniteRepeatable
 import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
@@ -175,6 +177,12 @@ fun Mixing() {
                         expandedColorOne = true
                     }
                     .clip(shape = RoundedCornerShape(6.dp))
+                    .border(
+                        BorderStroke(
+                            width = 4.dp,
+                            color = MaterialTheme.colorScheme.outline
+                        )
+                    )
                     .background(colorOne)
             ) {
                 DropdownMenu(
@@ -228,6 +236,12 @@ fun Mixing() {
                         expandedColorTwo = true
                     }
                     .clip(shape = RoundedCornerShape(6.dp))
+                    .border(
+                        BorderStroke(
+                            width = 4.dp,
+                            color = MaterialTheme.colorScheme.outline
+                        )
+                    )
                     .background(colorTwo)
             ) {
                 DropdownMenu(
@@ -281,6 +295,12 @@ fun Mixing() {
                         expandedColorThree = true
                     }
                     .clip(shape = RoundedCornerShape(6.dp))
+                    .border(
+                        BorderStroke(
+                            width = 4.dp,
+                            color = MaterialTheme.colorScheme.outline
+                        )
+                    )
                     .background(colorThree)
             ) {
                 DropdownMenu(
@@ -329,6 +349,12 @@ fun Mixing() {
                     .padding(8.dp)
                     .fillMaxWidth(fraction = 0.4f)
                     .clip(shape = RoundedCornerShape(6.dp))
+                    .border(
+                        BorderStroke(
+                            width = 4.dp,
+                            color = MaterialTheme.colorScheme.outline
+                        )
+                    )
                     .background(animatedColor)
             )
         }
